@@ -41,7 +41,7 @@ const FAQ = () => {
     <section className="section-padding faq-section bg-alt" id="faq">
       <div className="container">
         <div className="faq-header">
-          <h2>Preguntas <span className="gradient-text">frecuentes</span></h2>
+          <h2>Preguntas {' '}<span className="gradient-text">frecuentes</span></h2>
         </div>
 
         <div className="faq-list">

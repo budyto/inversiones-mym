@@ -8,7 +8,7 @@ const Comparison = () => {
     <section className="section-padding comparison-section bg-alt" id="comparativa">
       <div className="container">
         <div className="comparison-header">
-          <h2>Renta mensual vs <span className="gradient-text">interés compuesto</span></h2>
+          <h2>Renta mensual vs {' '}<span className="gradient-text">interés compuesto</span></h2>
         </div>
 
         <div className="comparison-grid">

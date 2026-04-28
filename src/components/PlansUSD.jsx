@@ -8,7 +8,7 @@ const PlansUSD = () => {
     <section className="section-padding plans-section bg-alt" id="planes-usd">
       <div className="container">
         <div className="plans-header">
-          <h2>Portafolios en <span className="gradient-text">dólares</span></h2>
+          <h2>Portafolios en {' '}<span className="gradient-text">dólares</span></h2>
         </div>
 
         <div className="plans-grid">

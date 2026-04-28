@@ -37,7 +37,7 @@ const WhatIsIt = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Invertí en un sistema basado en <span className="gradient-text">comercios reales</span>
+            Invertí en un sistema basado en {' '}<span className="gradient-text">comercios reales</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

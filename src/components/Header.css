@@ -5,14 +5,14 @@
   width: 100%;
   z-index: 1000;
   transition: all 0.3s ease;
-  padding: 20px 0;
+  padding: 16px 0;
 }
 
 .header.scrolled {
-  background: rgba(5, 5, 5, 0.85);
+  background: rgba(5, 5, 5, 0.90);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  padding: 15px 0;
+  padding: 10px 0;
   border-bottom: 1px solid var(--border-color);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
@@ -21,57 +21,81 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
-.logo-icon {
-  width: 40px;
+.logo-img {
   height: 40px;
-  background: linear-gradient(135deg, var(--bg-sec), #000);
-  border: 2px solid var(--gold-main);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold-main);
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 20px;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
 }
 
 .logo-text {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   color: var(--text-white);
   letter-spacing: -0.5px;
+  white-space: nowrap;
 }
 
 .desktop-nav ul {
   display: flex;
   list-style: none;
-  gap: 32px;
+  gap: 28px;
 }
 
 .desktop-nav a {
   font-size: 14px;
   font-weight: 500;
   color: var(--text-gray);
+  white-space: nowrap;
 }
 
 .desktop-nav a:hover {
   color: var(--gold-main);
 }
 
-.btn-sm {
-  padding: 10px 20px;
-  font-size: 14px;
+/* Compact WhatsApp header button */
+.btn-wsp-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(135deg, var(--gold-main), var(--gold-dark));
+  color: var(--bg-main);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(212, 175, 55, 0.2);
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+}
+
+.btn-wsp-header:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  color: var(--bg-main);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 .mobile-menu-btn {
@@ -80,6 +104,7 @@
   border: none;
   color: var(--text-white);
   cursor: pointer;
+  padding: 4px;
 }
 
 .mobile-menu {
@@ -116,5 +141,11 @@
   }
   .mobile-menu {
     display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    display: none;
   }
 }

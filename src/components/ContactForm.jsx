@@ -41,7 +41,7 @@ const ContactForm = () => {
       <div className="container">
         <div className="contact-wrapper glass-card">
           <div className="contact-header">
-            <h2>Solicitá información <span className="gradient-text">privada</span></h2>
+            <h2>Solicitá información {' '}<span className="gradient-text">privada</span></h2>
             <p>Completá el formulario para derivarte con un asesor por WhatsApp.</p>
           </div>
 

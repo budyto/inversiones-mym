@@ -27,7 +27,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         >
-          Gestión estratégica de capital mediante <span className="gradient-text">financiamiento comercial</span>
+          Gestión estratégica de capital mediante {' '}<span className="gradient-text">financiamiento comercial</span>
         </motion.h1>
 
         <motion.p 

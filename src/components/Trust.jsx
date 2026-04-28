@@ -24,7 +24,7 @@ const Trust = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2>Un modelo privado, <span className="gradient-text">ordenado y transparente</span></h2>
+            <h2>Un modelo privado, {' '}<span className="gradient-text">ordenado y transparente</span></h2>
             <p>
               Capital aplicado a operaciones reales, con control interno y seguimiento personalizado. Nuestro enfoque asegura que cada paso esté validado para tu tranquilidad.
             </p>

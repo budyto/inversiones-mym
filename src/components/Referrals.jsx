@@ -16,7 +16,7 @@ const Referrals = () => {
       <div className="container">
         <div className="referrals-wrapper glass-card gold-border">
           <div className="referrals-content">
-            <h2>También podés formar parte como <span className="gradient-text">referidor privado</span></h2>
+            <h2>También podés formar parte como {' '}<span className="gradient-text">referidor privado</span></h2>
             <p className="referrals-desc">
               Si conocés personas interesadas en invertir de forma privada, podés conectarlas con MyM Inversiones y generar una comisión mensual mientras el capital permanezca activo.
             </p>

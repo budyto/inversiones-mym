@@ -77,7 +77,7 @@ const Simulator = () => {
     <section className="section-padding simulator-section" id="simulador">
       <div className="container">
         <div className="simulator-header">
-          <h2>Proyección de <span className="gradient-text">capital</span></h2>
+          <h2>Proyección de {' '}<span className="gradient-text">capital</span></h2>
           <p>Analizá el rendimiento estimado de tu posición según la modalidad seleccionada.</p>
         </div>
 

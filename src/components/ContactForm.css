@@ -6,12 +6,11 @@
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('/assets/images/contact_bg.png');
+  background-image: url('/assets/images/fondo_contacto.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   opacity: 0.35;
-  mix-blend-mode: luminosity;
   z-index: 0;
 }
 

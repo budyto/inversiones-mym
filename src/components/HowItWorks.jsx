@@ -30,7 +30,7 @@ const HowItWorks = () => {
     <section className="section-padding how-it-works" id="como-funciona">
       <div className="container">
         <div className="how-it-works-header">
-          <h2>Cómo <span className="gradient-text">funciona</span></h2>
+          <h2>Cómo {' '}<span className="gradient-text">funciona</span></h2>
         </div>
 
         <div className="timeline">

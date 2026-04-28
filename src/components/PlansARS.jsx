@@ -8,7 +8,7 @@ const PlansARS = () => {
     <section className="section-padding plans-section" id="planes">
       <div className="container">
         <div className="plans-header">
-          <h2>Portafolios en <span className="gradient-text">pesos</span></h2>
+          <h2>Portafolios en {' '}<span className="gradient-text">pesos</span></h2>
           <p>Esquemas diseñados para optimizar el rendimiento mediante distribución periódica o capitalización.</p>
         </div>
 
