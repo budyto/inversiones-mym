@@ -1,0 +1,69 @@
+.trust-section {
+  background: var(--bg-main);
+  position: relative;
+}
+
+.trust-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('/assets/images/trust_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.3;
+  mix-blend-mode: luminosity;
+  z-index: 0;
+}
+
+.trust-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.trust-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.trust-text h2 {
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+.trust-text p {
+  font-size: 18px;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.trust-points {
+  padding: 40px;
+}
+
+.trust-points ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.trust-points li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  color: var(--text-white);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .trust-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

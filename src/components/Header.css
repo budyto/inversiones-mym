@@ -1,0 +1,120 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  padding: 20px 0;
+}
+
+.header.scrolled {
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--bg-sec), #000);
+  border: 2px solid var(--gold-main);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-main);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 20px;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text-white);
+  letter-spacing: -0.5px;
+}
+
+.desktop-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.desktop-nav a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-gray);
+}
+
+.desktop-nav a:hover {
+  color: var(--gold-main);
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-white);
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  background: var(--bg-sec);
+  border-top: 1px solid var(--border-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-menu a {
+  display: block;
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  .desktop-nav, .hidden-mobile {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
