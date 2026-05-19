@@ -85,6 +85,8 @@
   flex-direction: column;
   position: relative;
   border-left: 1px solid rgba(212, 175, 55, 0.1);
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .form-group {
@@ -200,6 +202,8 @@
   font-family: var(--font-mono);
   font-weight: 600;
   letter-spacing: -0.5px;
+  word-break: break-all;
+  max-width: 100%;
 }
 
 .result-row.highlight strong {
@@ -221,6 +225,8 @@
   background: linear-gradient(90deg, #d4af37, #fdf5e6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  word-break: break-all;
+  max-width: 100%;
 }
 
 .text-success {
@@ -308,17 +314,23 @@
   }
   
   .result-row strong {
-    font-size: 20px;
+    font-size: clamp(16px, 5vw, 20px);
+    word-break: break-all;
+    max-width: 100%;
   }
   
   .result-row.total {
     align-items: center;
     gap: 12px;
     padding-top: 24px;
+    max-width: 100%;
   }
   
   .result-row.total strong {
-    font-size: 40px;
+    font-size: clamp(28px, 9vw, 40px);
+    word-break: break-all;
+    max-width: 100%;
+    text-align: center;
   }
   
   .simulator-note {
