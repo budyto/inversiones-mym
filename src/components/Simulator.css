@@ -274,4 +274,38 @@
   .radio-btn:last-child {
     border-bottom: none;
   }
+  
+  .results-header {
+    justify-content: center;
+  }
+  
+  .result-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .result-row span {
+    font-size: 14px;
+  }
+  
+  .result-row strong {
+    font-size: 20px;
+  }
+  
+  .result-row.total {
+    align-items: center;
+    gap: 12px;
+    padding-top: 24px;
+  }
+  
+  .result-row.total strong {
+    font-size: 40px;
+  }
+  
+  .simulator-note {
+    font-size: 12px;
+    padding: 20px 15px;
+  }
 }
