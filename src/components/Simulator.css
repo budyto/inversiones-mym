@@ -254,22 +254,39 @@
 @media (max-width: 600px) {
   .simulator-controls {
     padding: 30px 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
   .simulator-results {
     padding: 30px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
   .form-group label {
     text-align: center;
+    width: 100%;
   }
   .number-input, .select-input {
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
   }
   .radio-group {
     flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
   }
   .radio-btn {
     padding: 15px;
     border-bottom: 1px solid var(--border-color);
+    border-right: none;
+    width: 100%;
   }
   .radio-btn:last-child {
     border-bottom: none;
