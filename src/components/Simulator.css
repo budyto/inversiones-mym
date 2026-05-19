@@ -250,3 +250,28 @@
     border-bottom: 1px solid var(--border-color);
   }
 }
+
+@media (max-width: 600px) {
+  .simulator-controls {
+    padding: 30px 20px;
+  }
+  .simulator-results {
+    padding: 30px 20px;
+  }
+  .form-group label {
+    text-align: center;
+  }
+  .number-input, .select-input {
+    text-align: center;
+  }
+  .radio-group {
+    flex-direction: column;
+  }
+  .radio-btn {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .radio-btn:last-child {
+    border-bottom: none;
+  }
+}

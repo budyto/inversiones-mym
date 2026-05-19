@@ -40,12 +40,12 @@ const PlansUSD = () => {
           >
             <div className="plan-col-header">
               <h3>Interés compuesto</h3>
-              <p><span className="text-gold" style={{fontSize:'13px'}}>Premio adicional por reinversión (+0.3%).</span></p>
+              <p><span className="text-gold" style={{fontSize:'13px'}}>Premio adicional por reinversión (+0.5%).</span></p>
             </div>
             <ul className="plan-list">
-              <li><Check size={20} className="text-gold" /> Smart: <strong>1.8% mensual compuesto</strong></li>
-              <li><Check size={20} className="text-gold" /> Pro: <strong>2.3% mensual compuesto</strong></li>
-              <li><Check size={20} className="text-gold" /> Elite: <strong>2.8% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Smart: <strong>2% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Pro: <strong>2.5% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Elite: <strong>3% mensual compuesto</strong></li>
             </ul>
           </motion.div>
         </div>

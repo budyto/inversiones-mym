@@ -29,9 +29,9 @@ const Simulator = () => {
         { label: 'Premium (2.5%)', value: 0.025 },
       ],
       compuesto: [
-        { label: 'Smart (1.8%)', value: 0.018 },
-        { label: 'Pro (2.3%)', value: 0.023 },
-        { label: 'Elite (2.8%)', value: 0.028 },
+        { label: 'Smart (2%)', value: 0.02 },
+        { label: 'Pro (2.5%)', value: 0.025 },
+        { label: 'Elite (3%)', value: 0.03 },
       ]
     }
   };
@@ -165,7 +165,7 @@ const Simulator = () => {
 
               <div className="form-group">
                 <label>Plan Asignado</label>
-                <div className="select-input" style={{backgroundColor: 'rgba(212, 175, 55, 0.1)', borderColor: 'var(--gold-main)', color: 'var(--gold-main)'}}>
+                <div className="select-input" style={{backgroundColor: 'rgba(212, 175, 55, 0.1)', borderColor: 'var(--gold-main)', color: 'var(--gold-main)', textAlign: 'center'}}>
                   {selectedPlan.label}
                 </div>
               </div>
