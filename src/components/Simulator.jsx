@@ -7,40 +7,36 @@ const Simulator = () => {
   const [currency, setCurrency] = useState('ARS');
   const [modality, setModality] = useState('mensual');
   const [amount, setAmount] = useState(1000000);
-  const [months, setMonths] = useState(6);
-  const [rate, setRate] = useState(0.05);
+  const [months, setMonths] = useState(4);
 
   const plansOptions = {
     ARS: {
       mensual: [
-        { label: 'Básico (5%)', value: 0.05 },
-        { label: 'Intermedio (6%)', value: 0.06 },
-        { label: 'Premium (7%)', value: 0.07 },
+        { label: 'Básico (3%)', value: 0.03 },
+        { label: 'Intermedio (4%)', value: 0.04 },
+        { label: 'Premium (5%)', value: 0.05 },
       ],
       compuesto: [
-        { label: 'Smart (4%)', value: 0.04 },
-        { label: 'Pro (5%)', value: 0.05 },
-        { label: 'Elite (6%)', value: 0.06 },
+        { label: 'Smart (3.5%)', value: 0.035 },
+        { label: 'Pro (4.5%)', value: 0.045 },
+        { label: 'Elite (5.5%)', value: 0.055 },
       ]
     },
     USD: {
       mensual: [
-        { label: 'Básico (4%)', value: 0.04 },
-        { label: 'Intermedio (5%)', value: 0.05 },
-        { label: 'Premium (6%)', value: 0.06 },
+        { label: 'Básico (1.5%)', value: 0.015 },
+        { label: 'Intermedio (2%)', value: 0.02 },
+        { label: 'Premium (2.5%)', value: 0.025 },
       ],
       compuesto: [
-        { label: 'Smart (3%)', value: 0.03 },
-        { label: 'Pro (4%)', value: 0.04 },
-        { label: 'Elite (5%)', value: 0.05 },
+        { label: 'Smart (1.8%)', value: 0.018 },
+        { label: 'Pro (2.3%)', value: 0.023 },
+        { label: 'Elite (2.8%)', value: 0.028 },
       ]
     }
   };
 
   useEffect(() => {
-    // Reset rate to the first option when changing currency or modality
-    setRate(plansOptions[currency][modality][0].value);
-    
     // Adjust default amount format
     if (currency === 'USD' && amount > 100000) {
       setAmount(1000);
@@ -48,6 +44,16 @@ const Simulator = () => {
       setAmount(1000000);
     }
   }, [currency, modality]);
+
+  const getPlanDetails = () => {
+    let index = 0;
+    if (months === 8) index = 1;
+    if (months === 12) index = 2;
+    return plansOptions[currency][modality][index];
+  };
+
+  const selectedPlan = getPlanDetails();
+  const rate = selectedPlan.value;
 
   const formatCurrency = (val) => {
     if (currency === 'ARS') {
@@ -134,32 +140,34 @@ const Simulator = () => {
               </div>
 
               <div className="form-group">
-                <label>Plazo: {months} meses</label>
-                <input 
-                  type="range" 
-                  className="range-input"
-                  min="1" 
-                  max="12" 
-                  value={months}
-                  onChange={(e) => setMonths(Number(e.target.value))}
-                />
-                <div className="range-labels">
-                  <span>1 mes</span>
-                  <span>12 meses</span>
+                <label>Plazo de inversión</label>
+                <div className="radio-group">
+                  <button 
+                    className={`radio-btn ${months === 4 ? 'active' : ''}`}
+                    onClick={() => setMonths(4)}
+                  >
+                    4 meses
+                  </button>
+                  <button 
+                    className={`radio-btn ${months === 8 ? 'active' : ''}`}
+                    onClick={() => setMonths(8)}
+                  >
+                    8 meses
+                  </button>
+                  <button 
+                    className={`radio-btn ${months === 12 ? 'active' : ''}`}
+                    onClick={() => setMonths(12)}
+                  >
+                    12 meses
+                  </button>
                 </div>
               </div>
 
               <div className="form-group">
-                <label>Plan de rentabilidad</label>
-                <select 
-                  className="select-input"
-                  value={rate}
-                  onChange={(e) => setRate(Number(e.target.value))}
-                >
-                  {plansOptions[currency][modality].map((plan, idx) => (
-                    <option key={idx} value={plan.value}>{plan.label}</option>
-                  ))}
-                </select>
+                <label>Plan Asignado</label>
+                <div className="select-input" style={{backgroundColor: 'rgba(212, 175, 55, 0.1)', borderColor: 'var(--gold-main)', color: 'var(--gold-main)'}}>
+                  {selectedPlan.label}
+                </div>
               </div>
 
             </div>

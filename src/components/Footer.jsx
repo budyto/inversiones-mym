@@ -8,10 +8,12 @@ const Footer = () => {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <div className="logo-icon mb-4">M</div>
-            <span className="logo-text">MyM Inversiones</span>
+            <div className="footer-brand-header">
+              <img src="/assets/images/logo_mym.webp" alt="MyM Inversiones Logo" className="footer-logo" />
+              <span className="logo-text">MyM Inversiones</span>
+            </div>
             <p className="footer-desc mt-2">
-              Sistema privado de financiación comercial. Información sujeta a evaluación previa.
+              Gestión estratégica de capital y financiamiento comercial. Operaciones sujetas a evaluación de riesgo.
             </p>
           </div>
           

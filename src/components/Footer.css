@@ -15,6 +15,18 @@
   margin-bottom: 16px;
 }
 
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+}
+
 .mt-2 {
   margin-top: 8px;
 }

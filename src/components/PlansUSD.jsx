@@ -24,9 +24,9 @@ const PlansUSD = () => {
               <h3>Renta mensual común</h3>
             </div>
             <ul className="plan-list">
-              <li><Check size={20} className="text-gold" /> Básico: <strong>4% mensual</strong></li>
-              <li><Check size={20} className="text-gold" /> Intermedio: <strong>5% mensual</strong></li>
-              <li><Check size={20} className="text-gold" /> Premium: <strong>6% mensual</strong></li>
+              <li><Check size={20} className="text-gold" /> Básico: <strong>1.5% mensual</strong></li>
+              <li><Check size={20} className="text-gold" /> Intermedio: <strong>2% mensual</strong></li>
+              <li><Check size={20} className="text-gold" /> Premium: <strong>2.5% mensual</strong></li>
             </ul>
           </motion.div>
 
@@ -40,11 +40,12 @@ const PlansUSD = () => {
           >
             <div className="plan-col-header">
               <h3>Interés compuesto</h3>
+              <p><span className="text-gold" style={{fontSize:'13px'}}>Premio adicional por reinversión (+0.3%).</span></p>
             </div>
             <ul className="plan-list">
-              <li><Check size={20} className="text-gold" /> Smart: <strong>3% mensual compuesto</strong></li>
-              <li><Check size={20} className="text-gold" /> Pro: <strong>4% mensual compuesto</strong></li>
-              <li><Check size={20} className="text-gold" /> Elite: <strong>5% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Smart: <strong>1.8% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Pro: <strong>2.3% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Elite: <strong>2.8% mensual compuesto</strong></li>
             </ul>
           </motion.div>
         </div>

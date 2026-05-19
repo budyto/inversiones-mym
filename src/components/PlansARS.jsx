@@ -26,9 +26,9 @@ const PlansARS = () => {
               <p>Cobrás una renta mensual y mantenés el capital invertido.</p>
             </div>
             <ul className="plan-list">
-              <li><Check size={20} className="text-gold" /> Básico: <strong>5% mensual</strong></li>
-              <li><Check size={20} className="text-gold" /> Intermedio: <strong>6% mensual</strong></li>
-              <li><Check size={20} className="text-gold" /> Premium: <strong>7% mensual</strong></li>
+              <li><Check size={20} className="text-gold" /> Básico: <strong>3% mensual</strong></li>
+              <li><Check size={20} className="text-gold" /> Intermedio: <strong>4% mensual</strong></li>
+              <li><Check size={20} className="text-gold" /> Premium: <strong>5% mensual</strong></li>
             </ul>
           </motion.div>
 
@@ -42,12 +42,12 @@ const PlansARS = () => {
           >
             <div className="plan-col-header">
               <h3>Interés compuesto</h3>
-              <p>Reinvertís la rentabilidad para hacer crecer el capital mes a mes.</p>
+              <p>Reinvertís la rentabilidad para hacer crecer el capital exponencialmente mes a mes. <br/> <span className="text-gold" style={{fontSize:'13px'}}>Premio adicional por reinversión (+0.5%).</span></p>
             </div>
             <ul className="plan-list">
-              <li><Check size={20} className="text-gold" /> Smart: <strong>4% mensual compuesto</strong></li>
-              <li><Check size={20} className="text-gold" /> Pro: <strong>5% mensual compuesto</strong></li>
-              <li><Check size={20} className="text-gold" /> Elite: <strong>6% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Smart: <strong>3.5% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Pro: <strong>4.5% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Elite: <strong>5.5% mensual compuesto</strong></li>
             </ul>
           </motion.div>
         </div>
