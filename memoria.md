@@ -46,5 +46,10 @@ Se aplicaron principios de UX Writing para Fintech Senior:
 - Se implementaron términos institucionales: "Portafolios", "Proyección analítica", "Asignación comercial", "Gestión estratégica de capital".
 - Revisiones ortográficas y forzado de espaciados nativos en React (JSX) para asegurar correcta semántica visual.
 
-## 6. Estado del Repositorio
-El proyecto está completamente funcional, responsivo (adaptable a móviles y tablets) y estructurado para ser desplegado en servicios como Vercel, Netlify o Hostinger. La carga de *assets* es ultrarrápida debido a la migración a `.webp` y la limpieza de archivos inactivos. La validación del *build* (`npm run build`) ejecuta sin errores.
+## 6. Mejoras Técnicas y de Rendimiento (Última Sesión)
+- **Simulador de Inversiones (Robustez en Mobile):** Se aplicó una reestructuración estricta en el CSS del simulador para pantallas móviles. Se forzó `width: 100%` y `box-sizing: border-box` en todos los controles para evitar desbordes asimétricos. Adicionalmente, se implementó tipografía fluida (`clamp`) y ruptura segura de texto (`word-break: break-all`) para manejar cifras matemáticas extremadamente altas sin romper la grilla.
+- **Lógica Financiera del Simulador:** Se refinaron las tasas para mantener competitividad y realismo frente al mercado bancario (ej. interés compuesto ajustado a 2%, 2.5% y 3% en USD), atando dinámicamente los planes a los meses (4, 8, 12) eliminando la necesidad de selectores redundantes.
+- **Optimización de SEO (OpenGraph):** Se configuraron etiquetas meta absolutas apuntando al servidor raíz en Hostinger (`/assets/images/...`), utilizando exclusivamente formato `.jpg` en resoluciones inferiores a 300 KB para garantizar el despliegue nativo de previsualizaciones y miniaturas (thumbnails) en plataformas estrictas como WhatsApp y Facebook.
+
+## 7. Estado del Repositorio
+El proyecto está completamente funcional, responsivo (adaptable a móviles y tablets) y estructurado para ser desplegado en servicios como Vercel, Netlify o Hostinger. La carga de *assets* es ultrarrápida debido a la migración a `.webp` (y el fallback estratégico a `.jpg` en SEO) y la limpieza de archivos inactivos. La validación del *build* (`npm run build`) ejecuta sin errores.
