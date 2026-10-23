@@ -8,12 +8,12 @@ const WhatIsIt = () => {
     {
       icon: <Store size={32} />,
       title: "Financiación a comercios",
-      desc: "Préstamos orientados exclusivamente a negocios físicos y emprendedores activos."
+      desc: "Préstamos orientados principalmente a comerciantes y emprendedores activos."
     },
     {
       icon: <TrendingUp size={32} />,
       title: "Cobranzas con flujo diario",
-      desc: "Retornos constantes basados en la recaudación diaria de los comercios."
+      desc: "Los créditos se cobran todos los días, con seguimiento de cada cuota."
     },
     {
       icon: <Handshake size={32} />,
@@ -23,7 +23,7 @@ const WhatIsIt = () => {
     {
       icon: <ShieldCheck size={32} />,
       title: "Modelo privado y controlado",
-      desc: "Sistema cerrado por invitación o evaluación para garantizar la seguridad."
+      desc: "Sistema cerrado por invitación o evaluación, con seguimiento cercano de cada inversión."
     }
   ];
 

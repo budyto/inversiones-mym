@@ -9,7 +9,7 @@ const Trust = () => {
     "Control de capital activo",
     "Registro de inversores y referidores",
     "Seguimiento mensual",
-    "Fondo de reserva interno",
+    "Contrato y pagaré por cada inversión",
     "Comunicación directa"
   ];
 

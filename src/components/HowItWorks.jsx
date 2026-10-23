@@ -18,7 +18,7 @@ const HowItWorks = () => {
     },
     {
       title: "Asignación comercial",
-      desc: "El capital es inyectado en el flujo de trabajo de comercios previamente verificados."
+      desc: "El capital se aplica a créditos a comerciantes previamente evaluados."
     },
     {
       title: "Monitoreo de rendimientos",

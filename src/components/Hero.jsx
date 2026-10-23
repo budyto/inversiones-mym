@@ -56,7 +56,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.8 }}
         >
           <div className="stat-item">
-            <span className="stat-value">Desde 3 meses</span>
+            <span className="stat-value">Desde 4 meses</span>
             <span className="stat-label">Plazo inicial mínimo</span>
           </div>
           <div className="stat-item">

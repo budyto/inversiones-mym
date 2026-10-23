@@ -11,11 +11,15 @@ const FAQ = () => {
     },
     {
       question: "¿Puedo retirar antes del plazo?",
-      answer: "Los retiros anticipados deben solicitarse y pueden estar sujetos a condiciones según el plan elegido."
+      answer: "Sí. Con un preaviso de 30 días se te devuelve el capital más el interés ganado hasta esa fecha."
     },
     {
       question: "¿La rentabilidad es fija?",
-      answer: "Los planes muestran referencias comerciales. Las condiciones finales se informan antes de cada operación."
+      answer: "La tasa del plan queda fija en el contrato por todo el plazo. Las condiciones finales se informan antes de firmar."
+    },
+    {
+      question: "¿Qué respaldo tengo?",
+      answer: "Cada inversión se instrumenta con un contrato de mutuo y un pagaré firmados por MyM CREDITOS S.A., la sociedad que opera la marca MyM Inversiones."
     },
     {
       question: "¿Qué diferencia hay entre renta mensual e interés compuesto?",
@@ -23,7 +27,7 @@ const FAQ = () => {
     },
     {
       question: "¿En qué se utiliza el capital?",
-      answer: "En operaciones de financiamiento privado a comercios y emprendedores evaluados por MyM Inversiones."
+      answer: "En créditos a comerciantes y emprendedores evaluados por MyM Inversiones."
     },
     {
       question: "¿Puedo ser referidor?",

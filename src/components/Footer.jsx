@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="logo-text">MyM Inversiones</span>
             </div>
             <p className="footer-desc mt-2">
-              Gestión estratégica de capital y financiamiento comercial. Operaciones sujetas a evaluación de riesgo.
+              Gestión estratégica de capital y financiamiento comercial. Operaciones sujetas a evaluación de riesgo, instrumentadas por MyM CREDITOS S.A. (CUIT 30-71917577-1).
             </p>
           </div>
           

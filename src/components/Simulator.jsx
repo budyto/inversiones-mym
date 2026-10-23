@@ -13,25 +13,25 @@ const Simulator = () => {
     ARS: {
       mensual: [
         { label: 'Básico (3%)', value: 0.03 },
-        { label: 'Intermedio (4%)', value: 0.04 },
-        { label: 'Premium (5%)', value: 0.05 },
+        { label: 'Intermedio (3,5%)', value: 0.035 },
+        { label: 'Premium (4%)', value: 0.04 },
       ],
       compuesto: [
-        { label: 'Smart (3.5%)', value: 0.035 },
-        { label: 'Pro (4.5%)', value: 0.045 },
-        { label: 'Elite (5.5%)', value: 0.055 },
+        { label: 'Smart (3%)', value: 0.03 },
+        { label: 'Pro (3,5%)', value: 0.035 },
+        { label: 'Elite (4%)', value: 0.04 },
       ]
     },
     USD: {
       mensual: [
-        { label: 'Básico (1.5%)', value: 0.015 },
+        { label: 'Básico (1,5%)', value: 0.015 },
         { label: 'Intermedio (2%)', value: 0.02 },
-        { label: 'Premium (2.5%)', value: 0.025 },
+        { label: 'Premium (2,5%)', value: 0.025 },
       ],
       compuesto: [
-        { label: 'Smart (2%)', value: 0.02 },
-        { label: 'Pro (2.5%)', value: 0.025 },
-        { label: 'Elite (3%)', value: 0.03 },
+        { label: 'Smart (1,5%)', value: 0.015 },
+        { label: 'Pro (2%)', value: 0.02 },
+        { label: 'Elite (2,5%)', value: 0.025 },
       ]
     }
   };

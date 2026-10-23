@@ -29,7 +29,9 @@ const ContactForm = () => {
     setSubmitted(true);
     
     // Prepare WhatsApp Link
-    const text = `Hola MyM Inversiones, quiero recibir información sobre el sistema privado de inversiones. Mi nombre es ${formData.nombre}, quiero consultar por ${formData.modalidad}, en ${formData.moneda}, por un monto aproximado de ${formData.monto}. ${formData.mensaje ? `Mensaje extra: ${formData.mensaje}` : ''}`;
+    const text = formData.tipo === 'Referidor'
+      ? `Hola MyM Inversiones, quiero información para ser referidor. Mi nombre es ${formData.nombre}. ${formData.mensaje ? `Mensaje extra: ${formData.mensaje}` : ''}`
+      : `Hola MyM Inversiones, quiero recibir información sobre el sistema privado de inversiones. Mi nombre es ${formData.nombre}, quiero consultar por ${formData.modalidad}, en ${formData.moneda}, por un monto aproximado de ${formData.monto}. ${formData.mensaje ? `Mensaje extra: ${formData.mensaje}` : ''}`;
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/5491125834909?text=${encodedText}`;
     
@@ -52,8 +54,8 @@ const ContactForm = () => {
               animate={{ opacity: 1, scale: 1 }}
             >
               <CheckCircle2 size={48} className="text-success" />
-              <h3>¡Gracias! Recibimos tu consulta.</h3>
-              <p>Un asesor de MyM Inversiones se va a contactar con vos. También abrimos WhatsApp para que puedas enviarnos el mensaje directo.</p>
+              <h3>¡Gracias! Tu consulta está lista.</h3>
+              <p>Abrimos WhatsApp con el mensaje armado: envialo y un asesor de MyM Inversiones se va a contactar con vos.</p>
               <button className="btn-secondary mt-4" onClick={() => setSubmitted(false)}>Enviar otra consulta</button>
             </motion.div>
           ) : (

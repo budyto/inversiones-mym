@@ -26,9 +26,9 @@ const PlansARS = () => {
               <p>Cobrás una renta mensual y mantenés el capital invertido.</p>
             </div>
             <ul className="plan-list">
-              <li><Check size={20} className="text-gold" /> Básico: <strong>3% mensual</strong></li>
-              <li><Check size={20} className="text-gold" /> Intermedio: <strong>4% mensual</strong></li>
-              <li><Check size={20} className="text-gold" /> Premium: <strong>5% mensual</strong></li>
+              <li><Check size={20} className="text-gold" /> Básico · 4 meses: <strong>3% mensual</strong></li>
+              <li><Check size={20} className="text-gold" /> Intermedio · 8 meses: <strong>3,5% mensual</strong></li>
+              <li><Check size={20} className="text-gold" /> Premium · 12 meses: <strong>4% mensual</strong></li>
             </ul>
           </motion.div>
 
@@ -42,18 +42,18 @@ const PlansARS = () => {
           >
             <div className="plan-col-header">
               <h3>Interés compuesto</h3>
-              <p>Reinvertís la rentabilidad para hacer crecer el capital exponencialmente mes a mes. <br/> <span className="text-gold" style={{fontSize:'13px'}}>Premio adicional por reinversión (+0.5%).</span></p>
+              <p>Reinvertís la rentabilidad y cada mes el interés se calcula sobre un capital mayor. <br/> <span className="text-gold" style={{fontSize:'13px'}}>Al 4% compuesto, 12 meses rinden 60,1% (contra 48% de la renta mensual).</span></p>
             </div>
             <ul className="plan-list">
-              <li><Check size={20} className="text-gold" /> Smart: <strong>3.5% mensual compuesto</strong></li>
-              <li><Check size={20} className="text-gold" /> Pro: <strong>4.5% mensual compuesto</strong></li>
-              <li><Check size={20} className="text-gold" /> Elite: <strong>5.5% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Smart · 4 meses: <strong>3% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Pro · 8 meses: <strong>3,5% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Elite · 12 meses: <strong>4% mensual compuesto</strong></li>
             </ul>
           </motion.div>
         </div>
         
         <p className="plans-note">
-          * Los porcentajes pueden variar según monto, plazo, disponibilidad operativa y evaluación interna.
+          * El plan depende del plazo. La tasa queda fija en el contrato por todo el plazo; las condiciones finales se informan antes de firmar.
         </p>
       </div>
     </section>
