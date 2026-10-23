@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calculator } from 'lucide-react';
+import { conPuntos, soloDigitos } from '../utils/miles';
 import './Simulator.css';
 
 const Simulator = () => {
@@ -130,12 +131,12 @@ const Simulator = () => {
 
               <div className="form-group">
                 <label>Monto a invertir ({currency})</label>
-                <input 
-                  type="number" 
+                <input
+                  type="text"
+                  inputMode="numeric"
                   className="number-input"
-                  value={amount}
-                  onChange={(e) => setAmount(Number(e.target.value))}
-                  min="0"
+                  value={conPuntos(amount)}
+                  onChange={(e) => setAmount(Number(soloDigitos(e.target.value).slice(0, 13)) || 0)}
                 />
               </div>
 

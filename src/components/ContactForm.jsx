@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle2 } from 'lucide-react';
+import { conPuntos } from '../utils/miles';
 import './ContactForm.css';
 
 const ContactForm = () => {
@@ -18,9 +19,11 @@ const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
+    // El monto se ve con punto cada tres cifras mientras se tipea: 10000 → 10.000.
+    const valor = e.target.name === 'monto' ? conPuntos(e.target.value) : e.target.value;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: valor
     });
   };
 
@@ -31,7 +34,7 @@ const ContactForm = () => {
     // Prepare WhatsApp Link
     const text = formData.tipo === 'Referidor'
       ? `Hola MyM Inversiones, quiero información para ser referidor. Mi nombre es ${formData.nombre}. ${formData.mensaje ? `Mensaje extra: ${formData.mensaje}` : ''}`
-      : `Hola MyM Inversiones, quiero recibir información sobre el sistema privado de inversiones. Mi nombre es ${formData.nombre}, quiero consultar por ${formData.modalidad}, en ${formData.moneda}, por un monto aproximado de ${formData.monto}. ${formData.mensaje ? `Mensaje extra: ${formData.mensaje}` : ''}`;
+      : `Hola MyM Inversiones, quiero recibir información sobre el sistema privado de inversiones. Mi nombre es ${formData.nombre}, quiero consultar por ${formData.modalidad}, en ${formData.moneda}, por un monto aproximado de ${formData.moneda === 'USD' ? 'US$' : '$'}${formData.monto}. ${formData.mensaje ? `Mensaje extra: ${formData.mensaje}` : ''}`;
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/5491125834909?text=${encodedText}`;
     
@@ -88,7 +91,7 @@ const ContactForm = () => {
               <div className="form-row">
                 <div className="form-group">
                   <label>Monto estimado *</label>
-                  <input type="text" name="monto" required value={formData.monto} onChange={handleChange} className="form-input" placeholder="Ej: 1000000" />
+                  <input type="text" inputMode="numeric" name="monto" required value={formData.monto} onChange={handleChange} className="form-input" placeholder="Ej: 1.000.000" />
                 </div>
                 <div className="form-group">
                   <label>Moneda *</label>
