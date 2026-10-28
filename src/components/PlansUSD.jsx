@@ -24,9 +24,9 @@ const PlansUSD = () => {
               <h3>Renta mensual común</h3>
             </div>
             <ul className="plan-list">
-              <li><Check size={20} className="text-gold" /> Básico · 4 meses: <strong>1,5% mensual</strong></li>
-              <li><Check size={20} className="text-gold" /> Intermedio · 8 meses: <strong>2% mensual</strong></li>
-              <li><Check size={20} className="text-gold" /> Premium · 12 meses: <strong>2,5% mensual</strong></li>
+              <li><Check size={20} className="text-gold" /> Básico · 4 meses: <strong>2% mensual</strong></li>
+              <li><Check size={20} className="text-gold" /> Intermedio · 8 meses: <strong>2,5% mensual</strong></li>
+              <li><Check size={20} className="text-gold" /> Premium · 12 meses: <strong>3% mensual</strong></li>
             </ul>
           </motion.div>
 
@@ -43,9 +43,9 @@ const PlansUSD = () => {
               <p>Reinvertís la rentabilidad y cada mes el interés se calcula sobre un capital mayor.</p>
             </div>
             <ul className="plan-list">
-              <li><Check size={20} className="text-gold" /> Smart · 4 meses: <strong>1,5% mensual compuesto</strong></li>
-              <li><Check size={20} className="text-gold" /> Pro · 8 meses: <strong>2% mensual compuesto</strong></li>
-              <li><Check size={20} className="text-gold" /> Elite · 12 meses: <strong>2,5% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Smart · 4 meses: <strong>2% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Pro · 8 meses: <strong>2,5% mensual compuesto</strong></li>
+              <li><Check size={20} className="text-gold" /> Elite · 12 meses: <strong>3% mensual compuesto</strong></li>
             </ul>
           </motion.div>
         </div>

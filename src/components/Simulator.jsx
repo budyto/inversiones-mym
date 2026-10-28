@@ -25,14 +25,14 @@ const Simulator = () => {
     },
     USD: {
       mensual: [
-        { label: 'Básico (1,5%)', value: 0.015 },
-        { label: 'Intermedio (2%)', value: 0.02 },
-        { label: 'Premium (2,5%)', value: 0.025 },
+        { label: 'Básico (2%)', value: 0.02 },
+        { label: 'Intermedio (2,5%)', value: 0.025 },
+        { label: 'Premium (3%)', value: 0.03 },
       ],
       compuesto: [
-        { label: 'Smart (1,5%)', value: 0.015 },
-        { label: 'Pro (2%)', value: 0.02 },
-        { label: 'Elite (2,5%)', value: 0.025 },
+        { label: 'Smart (2%)', value: 0.02 },
+        { label: 'Pro (2,5%)', value: 0.025 },
+        { label: 'Elite (3%)', value: 0.03 },
       ]
     }
   };
