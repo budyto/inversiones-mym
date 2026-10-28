@@ -11,7 +11,11 @@ const FAQ = () => {
     },
     {
       question: "¿Puedo retirar antes del plazo?",
-      answer: "Sí. Con un preaviso de 30 días se te devuelve el capital más el interés ganado hasta esa fecha."
+      answer: "Sí, avisando con 30 días de anticipación. En ese caso el interés se recalcula con la tasa del plan del plazo que hayas cumplido: por ejemplo, si firmaste a 8 meses y te vas en el mes 4, se te liquida con la tasa del plan de 4 meses, y se descuenta lo que ya cobraste. Si te vas antes de los 4 meses, recuperás tu capital."
+    },
+    {
+      question: "¿Cómo entrego el dinero y cómo cobro?",
+      answer: "Todo es en efectivo: entregás el capital en efectivo y cobrás los intereses y el capital en efectivo, en la misma moneda de tu plan (pesos o dólares billete). Cada entrega y cada pago lleva un recibo numerado firmado por las dos partes."
     },
     {
       question: "¿La rentabilidad es fija?",

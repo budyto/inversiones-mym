@@ -4,6 +4,10 @@ import { Send, CheckCircle2 } from 'lucide-react';
 import { conPuntos } from '../utils/miles';
 import './ContactForm.css';
 
+// Además de abrir WhatsApp, la consulta llega a la app de MyM (pestaña Inversores → Consultas de la web).
+// Si ese envío falla, no pasa nada: el WhatsApp se abre igual.
+const URL_CONSULTAS = 'https://mym-creditos-81440681742.southamerica-east1.run.app/api/publico/inversiones/consulta';
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     nombre: '',
@@ -13,7 +17,12 @@ const ContactForm = () => {
     moneda: 'ARS',
     modalidad: 'Renta mensual',
     tipo: 'Inversor',
-    mensaje: ''
+    plazo: '',
+    localidad: '',
+    horario: '',
+    conocio: '',
+    mensaje: '',
+    sitio: ''   // campo trampa: invisible para una persona, lo llenan los robots
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -30,11 +39,21 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+
+    // A la app de MyM, sin esperar la respuesta: si falla, el WhatsApp sale igual.
+    try {
+      fetch(URL_CONSULTAS, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, pagina: window.location.pathname }),
+        keepalive: true
+      }).catch(() => {});
+    } catch (err) { /* sin conexión: queda el WhatsApp */ }
     
     // Prepare WhatsApp Link
     const text = formData.tipo === 'Referidor'
       ? `Hola MyM Inversiones, quiero información para ser referidor. Mi nombre es ${formData.nombre}. ${formData.mensaje ? `Mensaje extra: ${formData.mensaje}` : ''}`
-      : `Hola MyM Inversiones, quiero recibir información sobre el sistema privado de inversiones. Mi nombre es ${formData.nombre}, quiero consultar por ${formData.modalidad}, en ${formData.moneda}, por un monto aproximado de ${formData.moneda === 'USD' ? 'US$' : '$'}${formData.monto}. ${formData.mensaje ? `Mensaje extra: ${formData.mensaje}` : ''}`;
+      : `Hola MyM Inversiones, quiero recibir información sobre el sistema privado de inversiones. Mi nombre es ${formData.nombre}, quiero consultar por ${formData.modalidad}, en ${formData.moneda}, por un monto aproximado de ${formData.moneda === 'USD' ? 'US$' : '$'}${formData.monto}${formData.plazo ? `, a ${formData.plazo}` : ''}.${formData.localidad ? ` Soy de ${formData.localidad}.` : ''}${formData.horario ? ` Mejor horario para llamarme: ${formData.horario}.` : ''} ${formData.mensaje ? `Mensaje extra: ${formData.mensaje}` : ''}`;
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/5491125834909?text=${encodedText}`;
     
@@ -110,6 +129,51 @@ const ContactForm = () => {
                   <option value="Quiero asesoramiento">Quiero asesoramiento</option>
                 </select>
               </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label>Plazo que te interesa</label>
+                  <select name="plazo" value={formData.plazo} onChange={handleChange} className="form-input select-input">
+                    <option value="">Todavía no sé</option>
+                    <option value="4 meses">4 meses</option>
+                    <option value="8 meses">8 meses</option>
+                    <option value="12 meses">12 meses</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label>Localidad (Opcional)</label>
+                  <input type="text" name="localidad" value={formData.localidad} onChange={handleChange} className="form-input" placeholder="Ej: Lanús" />
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label>Mejor horario para llamarte (Opcional)</label>
+                  <select name="horario" value={formData.horario} onChange={handleChange} className="form-input select-input">
+                    <option value="">Cualquiera</option>
+                    <option value="Mañana">Mañana</option>
+                    <option value="Tarde">Tarde</option>
+                    <option value="Noche">Noche</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label>¿Cómo nos conociste? (Opcional)</label>
+                  <select name="conocio" value={formData.conocio} onChange={handleChange} className="form-input select-input">
+                    <option value="">Elegí una opción</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="TikTok">TikTok</option>
+                    <option value="Google">Google</option>
+                    <option value="Me lo recomendaron">Me lo recomendaron</option>
+                    <option value="Soy cliente de MyM">Soy cliente de MyM</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Campo trampa: no se ve ni se tabula; si viene lleno, es un robot. */}
+              <input type="text" name="sitio" value={formData.sitio} onChange={handleChange} tabIndex="-1" autoComplete="off" aria-hidden="true"
+                style={{ position: 'absolute', left: '-10000px', width: '1px', height: '1px', opacity: 0 }} />
 
               <div className="form-group">
                 <label>Mensaje adicional (Opcional)</label>
